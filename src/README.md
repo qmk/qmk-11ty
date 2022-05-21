@@ -1,6 +1,9 @@
 ---
 title: README
 layout: base.njk
+eleventyNavigation:
+  key: Readme
+  parent: root
 ---
 
 # Quantum Mechanical Keyboard Firmware
