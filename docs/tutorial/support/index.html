@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Getting Help/Support</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Getting Help/Support</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#realtime-chat">Realtime Chat</a></li><li><a href="#olkb-subreddit">OLKB Subreddit</a></li><li><a href="#github-issues">GitHub Issues</a></li></ol>
+      </nav>
+          </aside>
+          <article><h1 id="getting-help" tabindex="-1">Getting Help</h1>
+<p>There are a lot of resources for getting help with QMK.</p>
+<p>Please read our <a href="https://qmk.fm/coc/">Code of Conduct</a> before participating in any of our community spaces.</p>
+<h2 id="realtime-chat" tabindex="-1">Realtime Chat</h2>
+<p>If you need help with something, the best place to get quick support is going to be on our <a href="https://discord.gg/Uq7gcHh">Discord Server</a>.  There is usually somebody online, and there are a bunch of very helpful people there.</p>
+<h2 id="olkb-subreddit" tabindex="-1">OLKB Subreddit</h2>
+<p>The official QMK forum is <a href="https://reddit.com/r/olkb">/r/olkb</a> on <a href="https://reddit.com">reddit.com</a>.</p>
+<h2 id="github-issues" tabindex="-1">GitHub Issues</h2>
+<p>You can open an <a href="https://github.com/qmk/qmk_firmware/issues">issue on GitHub</a>. This is especially handy when your issue will require long-term discussion or debugging.</p>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

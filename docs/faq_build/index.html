@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Build/Compile QMK</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main>
+      <div class="doc-grid frame">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faq_build/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faq_debug/">Debugging QMK</a></li>
+<li><a href="/squeezing_avr/">Squeezing Space from AVR</a></li>
+<li><a href="/reference_glossary/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Build/Compile QMK</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#can't-program-on-linux">Can't Program on Linux</a><ol><li><a href="#linux-udev-rules-%3Aid%3Dlinux-udev-rules">Linux udev Rules :id=linux-udev-rules</a></li><li><a href="#serial-device-is-not-detected-in-bootloader-mode-on-linux">Serial device is not detected in bootloader mode on Linux</a></li></ol></li><li><a href="#unknown-device-for-dfu-bootloader">Unknown Device for DFU Bootloader</a></li><li><a href="#usb-vid-and-pid">USB VID and PID</a><ol><li><a href="#i-just-flashed-my-keyboard-and-it-does-nothing%2Fkeypresses-don't-register---it's-also-arm-(rev6-planck%2C-clueboard-60%2C-hs60v2%2C-etc...)-(feb-2019)">I just flashed my keyboard and it does nothing/keypresses don't register - it's also ARM (rev6 planck, clueboard 60, hs60v2, etc...) (Feb 2019)</a></li></ol></li></ol>
+      </nav>
+          </aside>
+          <article><p>This page covers questions about building QMK. If you haven't yet done so, you should read the <a href="getting_started_build_tools.md">Build Environment Setup</a> and <a href="getting_started_make_guide.md">Make Instructions</a> guides.</p>
+<h2 id="can't-program-on-linux" tabindex="-1">Can't Program on Linux</h2>
+<p>You will need proper permissions to operate a device. For Linux users, see the instructions regarding <code>udev</code> rules, below. If you have issues with <code>udev</code>, a work-around is to use the <code>sudo</code> command. If you are not familiar with this command, check its manual with <code>man sudo</code> or <a href="https://linux.die.net/man/8/sudo">see this webpage</a>.</p>
+<p>An example of using <code>sudo</code>, when your controller is ATMega32u4:</p>
+<pre><code>$ sudo dfu-programmer atmega32u4 erase --force
+$ sudo dfu-programmer atmega32u4 flash your.hex
+$ sudo dfu-programmer atmega32u4 reset
+</code></pre>
+<p>or just:</p>
+<pre><code>$ sudo make &lt;keyboard&gt;:&lt;keymap&gt;:flash
+</code></pre>
+<p>Note that running <code>make</code> with <code>sudo</code> is generally <em><strong>not</strong></em> a good idea, and you should use one of the former methods, if possible.</p>
+<h3 id="linux-udev-rules-%3Aid%3Dlinux-udev-rules" tabindex="-1">Linux <code>udev</code> Rules :id=linux-udev-rules</h3>
+<p>On Linux, you'll need proper privileges to communicate with the bootloader device. You can either use <code>sudo</code> when flashing firmware (not recommended), or place <a href="https://github.com/qmk/qmk_firmware/tree/master/util/udev/50-qmk.rules">this file</a> into <code>/etc/udev/rules.d/</code>.</p>
+<p>Once added, run the following:</p>
+<pre><code>sudo udevadm control --reload-rules
+sudo udevadm trigger
+</code></pre>
+<p><strong>Note:</strong> With older versions of ModemManager (&lt; 1.12), filtering only works when not in strict mode. The following commands can update that setting:</p>
+<pre><code>printf '[Service]\nExecStart=\nExecStart=/usr/sbin/ModemManager --filter-policy=default' | sudo tee /etc/systemd/system/ModemManager.service.d/policy.conf
+sudo systemctl daemon-reload
+sudo systemctl restart ModemManager
+</code></pre>
+<h3 id="serial-device-is-not-detected-in-bootloader-mode-on-linux" tabindex="-1">Serial device is not detected in bootloader mode on Linux</h3>
+<p>Make sure your kernel has appropriate support for your device. If your device uses USB ACM, such as
+Pro Micro (Atmega32u4), make sure to include <code>CONFIG_USB_ACM=y</code>. Other devices may require <code>USB_SERIAL</code> and any of its sub options.</p>
+<h2 id="unknown-device-for-dfu-bootloader" tabindex="-1">Unknown Device for DFU Bootloader</h2>
+<p>Issues encountered when flashing keyboards on Windows are most often due to having the wrong drivers installed for the bootloader, or none at all.</p>
+<p>Re-running the QMK installation script (<code>./util/qmk_install.sh</code> from the <code>qmk_firmware</code> directory in MSYS2 or WSL) or reinstalling the QMK Toolbox may fix the issue. Alternatively, you can download and run the <a href="https://github.com/qmk/qmk_driver_installer"><code>qmk_driver_installer</code></a> package manually.</p>
+<p>If that doesn't work, then you may need to download and run Zadig. See <a href="driver_installation_zadig.md">Bootloader Driver Installation with Zadig</a> for more detailed information.</p>
+<h2 id="usb-vid-and-pid" tabindex="-1">USB VID and PID</h2>
+<p>You can use any ID you want with editing <code>config.h</code>. Using any presumably unused ID will be no problem in fact except for very low chance of collision with other product.</p>
+<p>Most boards in QMK use <code>0xFEED</code> as the vendor ID. You should look through other keyboards to make sure you pick a unique Product ID.</p>
+<p>Also see this.
+https://github.com/tmk/tmk_keyboard/issues/150</p>
+<p>You can buy a really unique VID:PID here. I don't think you need this for personal use.</p>
+<ul>
+<li>https://www.obdev.at/products/vusb/license.html</li>
+<li>https://www.mcselec.com/index.php?page=shop.product_details&amp;flypage=shop.flypage&amp;product_id=92&amp;option=com_phpshop&amp;Itemid=1</li>
+</ul>
+<h3 id="i-just-flashed-my-keyboard-and-it-does-nothing%2Fkeypresses-don't-register---it's-also-arm-(rev6-planck%2C-clueboard-60%2C-hs60v2%2C-etc...)-(feb-2019)" tabindex="-1">I just flashed my keyboard and it does nothing/keypresses don't register - it's also ARM (rev6 planck, clueboard 60, hs60v2, etc...) (Feb 2019)</h3>
+<p>Due to how EEPROM works on ARM based chips, saved settings may no longer be valid.  This affects the default layers, and <em>may</em>, under certain circumstances we are still figuring out, make the keyboard unusable.  Resetting the EEPROM will correct this.</p>
+<p><a href="https://cdn.discordapp.com/attachments/473506116718952450/539284620861243409/planck_rev6_default.bin">Planck rev6 reset EEPROM</a> can be used to force an eeprom reset. After flashing this image, flash your normal firmware again which should restore your keyboard to <em>normal</em> working order.
+<a href="https://cdn.discordapp.com/attachments/473506116718952450/537849497313738762/preonic_rev3_default.bin">Preonic rev3 reset EEPROM</a></p>
+<p>If bootmagic is enabled in any form, you should be able to do this too (see <a href="feature_bootmagic.md">Bootmagic docs</a> and keyboard info for specifics on how to do this).</p>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

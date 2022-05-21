@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Squeezing the most out of AVR</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main>
+      <div class="doc-grid frame">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/squeezing_avr/">Squeezing Space from AVR</a></li>
+<li><a href="/reference_glossary/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Squeezing the most out of AVR</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#rules.mk-settings">rules.mk Settings</a></li><li><a href="#config.h-settings">config.h Settings</a></li><li><a href="#audio-settings">Audio Settings</a></li><li><a href="#layers">Layers</a></li><li><a href="#oled-tweaks">OLED tweaks</a></li><li><a href="#rgb-settings">RGB Settings</a></li></ol>
+      </nav>
+          </aside>
+          <article><p>AVR is severely resource-constrained, and as QMK continues to grow, it is approaching a point where support for AVR may need to be moved to legacy status as newer development is unable to fit into those constraints.</p>
+<p>However, if you need to reduce the compiled size of your firmware, there are a number of options to do so.</p>
+<h2 id="rules.mk-settings" tabindex="-1"><code>rules.mk</code> Settings</h2>
+<p>First and foremost is enabling link time optimization. To do so, add this to your rules.mk:</p>
+<pre class="language-makefile"><code class="language-makefile">LTO_ENABLE <span class="token operator">=</span> yes</code></pre>
+<p>This will cause the final step to take longer, but should get you a smaller compiled size. This also disables Action Functions, and Action Macros, both of which are deprecated.
+This will get you the most savings, in most situations.</p>
+<p>From there, disabling extraneous systems will help -- e.g.:</p>
+<pre class="language-makefile"><code class="language-makefile">CONSOLE_ENABLE <span class="token operator">=</span> no<br>COMMAND_ENABLE <span class="token operator">=</span> no<br>MOUSEKEY_ENABLE <span class="token operator">=</span> no<br>EXTRAKEY_ENABLE <span class="token operator">=</span> no</code></pre>
+<p>This disables some of the functionality that you may not need. But note that extrakeys disables stuff like the media keys and system volume control.</p>
+<p>If that isn't enough to get your firmware down to size, then there are some additional features that you can disable:</p>
+<pre class="language-makefile"><code class="language-makefile">SPACE_CADET_ENABLE <span class="token operator">=</span> no<br>GRAVE_ESC_ENABLE <span class="token operator">=</span> no <br>MAGIC_ENABLE <span class="token operator">=</span> no</code></pre>
+<p>These features are enabled by default, but may not be needed. Double check to make sure, though.
+Largest in size is &quot;magic&quot; -- the QMK magic keycodes -- which control things like NKRO toggling, GUI and ALT/CTRL swapping, etc. Disabling it will disable those functions.</p>
+<h2 id="config.h-settings" tabindex="-1"><code>config.h</code> Settings</h2>
+<p>If you've done all of that, and you don't want to disable features like RGB, Audio, OLEDs, etc, there are some additional options that you can add to your config.h that can help.</p>
+<p>Starting with Lock Key support. If you have a Cherry MX Lock switch (lucky you!), you don't want to do this. But chances are, you don't. In that case, add this to your <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">LOCKING_SUPPORT_ENABLE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">LOCKING_RESYNC_ENABLE</span></span></code></pre>
+<p>Oneshots. If you're not using these, you can disable the feature by adding this to your <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NO_ACTION_ONESHOT</span></span></code></pre>
+<p>The same with tapping keys (mod tap, layer tap, etc)</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NO_ACTION_TAPPING</span></span></code></pre>
+<h2 id="audio-settings" tabindex="-1">Audio Settings</h2>
+<p>If you're using the Audio feature, by default that includes the music mode feature. This tranlates matrix positions into notes. It's neat for sure, but most likely, you're not using it. You can disable it by adding this to your <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NO_MUSIC_MODE</span></span></code></pre>
+<p>And by adding this to your <code>rules.mk</code></p>
+<pre class="language-makefile"><code class="language-makefile">MUSIC_ENABLE <span class="token operator">=</span> no</code></pre>
+<h2 id="layers" tabindex="-1">Layers</h2>
+<p>There are also some options for layers, that can reduce the firmware size. All of these settings are for your <code>config.h</code>.</p>
+<p>You can limit the number of layers that the firmware uses -- if you're using less than 8 layers in total:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LAYER_STATE_8BIT</span></span></code></pre>
+<p>or if you require up to 16 layers instead:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LAYER_STATE_16BIT</span></span></code></pre>
+<p>Or if you're not using layers at all, you can outright remove the functionality altogether:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NO_ACTION_LAYER</span></span></code></pre>
+<h2 id="oled-tweaks" tabindex="-1">OLED tweaks</h2>
+<p>One place you can save a bunch of space here is by not using <code>sprintf</code> or <code>snprintf</code>. This function call takes up ~1.5kB of firmware space, and can be rewritten. For instance, WPM uses this a lot.</p>
+<p>You can convert this:</p>
+<pre class="language-c"><code class="language-c">    <span class="token comment">// OLD CODE</span><br>    <span class="token keyword">char</span> wpm_str<span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span><br>    <span class="token function">sprintf</span><span class="token punctuation">(</span>wpm_str<span class="token punctuation">,</span> <span class="token string">"WPM: %03d"</span><span class="token punctuation">,</span> <span class="token function">get_current_wpm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token function">oled_write</span><span class="token punctuation">(</span>wpm_str<span class="token punctuation">,</span> <span class="token char">' '</span><span class="token punctuation">)</span><span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>into this:</p>
+<pre class="language-c"><code class="language-c">    <span class="token comment">// NEW CODE</span><br>    <span class="token function">oled_write_P</span><span class="token punctuation">(</span><span class="token function">PSTR</span><span class="token punctuation">(</span><span class="token string">"WPM: "</span><span class="token punctuation">)</span><span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token function">oled_write</span><span class="token punctuation">(</span><span class="token function">get_u8_str</span><span class="token punctuation">(</span><span class="token function">get_current_wpm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token char">' '</span><span class="token punctuation">)</span><span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>which outputs <code>WPM:   5</code>. Or this:</p>
+<pre class="language-c"><code class="language-c">    <span class="token comment">// NEW CODE</span><br>    <span class="token function">oled_write_P</span><span class="token punctuation">(</span><span class="token function">PSTR</span><span class="token punctuation">(</span><span class="token string">"WPM: "</span><span class="token punctuation">)</span><span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span><br>    <span class="token function">oled_write</span><span class="token punctuation">(</span><span class="token function">get_u8_str</span><span class="token punctuation">(</span><span class="token function">get_current_wpm</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> <span class="token char">'0'</span><span class="token punctuation">)</span><span class="token punctuation">,</span> false<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>which outputs <code>WPM: 005</code>.</p>
+<h2 id="rgb-settings" tabindex="-1">RGB Settings</h2>
+<p>If you're using RGB on your board, both RGB Light (Underglow) and RGB Matrix (per key RGB) now require defines to enable different animations -- some keyboards enable a lot of animations by default, so you can generally gain back some space by disabling specific animations if you don't use them. For RGB Light you can disable these in your keymap's <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_ANIMATIONS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_BREATHING</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_RAINBOW_MOOD</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_RAINBOW_SWIRL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_SNAKE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_KNIGHT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_CHRISTMAS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_STATIC_GRADIENT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_RGB_TEST</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_ALTERNATING</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">RGBLIGHT_EFFECT_TWINKLE</span></span></code></pre>
+<p>For RGB Matrix, these need to be explicitly enabled as well. To disable any that were enabled by the keyboard, add one or more of these to your keymap's <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_ALPHAS_MODS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_GRADIENT_UP_DOWN</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_GRADIENT_LEFT_RIGHT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BREATHING</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BAND_SAT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BAND_VAL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BAND_PINWHEEL_SAT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BAND_PINWHEEL_VAL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BAND_SPIRAL_SAT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_BAND_SPIRAL_VAL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_ALL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_LEFT_RIGHT</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_UP_DOWN</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_RAINBOW_MOVING_CHEVRON</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_OUT_IN</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_OUT_IN_DUAL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_PINWHEEL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_CYCLE_SPIRAL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_DUAL_BEACON</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_RAINBOW_BEACON</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_RAINBOW_PINWHEELS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_RAINDROPS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_JELLYBEAN_RAINDROPS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_HUE_BREATHING</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_HUE_PENDULUM</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_HUE_WAVE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_PIXEL_FRACTAL</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_PIXEL_FLOW</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_PIXEL_RAIN</span></span><br><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_TYPING_HEATMAP</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_DIGITAL_RAIN</span></span><br><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_SIMPLE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_WIDE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTIWIDE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_CROSS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTICROSS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_NEXUS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_REACTIVE_MULTINEXUS</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SPLASH</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_MULTISPLASH</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_SPLASH</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">undef</span> <span class="token expression">ENABLE_RGB_MATRIX_SOLID_MULTISPLASH</span></span></code></pre>
+<h1 id="final-thoughts" tabindex="-1">Final Thoughts</h1>
+<p>If you've done all of this, and your firmware is still too large, then it's time. It's time to consider making the switch to ARM. Unfortunately, right now is the worst possible time for that, due to the silicon shortage, and supply chain issues. Getting an ARM chip is difficult, at best, and significantly overpriced, at worst.
+-- Drashna</p>
+<p>That said, there are a number of Pro Micro replacements with ARM controllers:</p>
+<ul>
+<li><a href="https://qmk.fm/proton-c/">Proton C</a> (out of stock)</li>
+<li><a href="https://github.com/customMK/Bonsai-C">Bonsai C</a> (Open Source, DIY/PCBA)</li>
+<li><a href="https://www.sparkfun.com/products/18288">Raspberry Pi 2040</a> (not currently supported, no ETA)</li>
+</ul>
+<p>There are other, non-Pro Micro compatible boards out there. The most popular being:</p>
+<ul>
+<li><a href="https://www.aliexpress.com/item/1005001456186625.html">WeAct Blackpill F411</a> (~$6 USD)</li>
+</ul>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

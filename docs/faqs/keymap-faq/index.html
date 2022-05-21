@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Keymap FAQ</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Keymap FAQ</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#what-keycodes-can-i-use%3F">What Keycodes Can I Use?</a></li><li><a href="#what-are-the-default-keycodes%3F">What Are the Default Keycodes?</a></li><li><a href="#how-can-i-make-custom-names-for-complex-keycodes%3F">How Can I Make Custom Names For Complex Keycodes?</a></li><li><a href="#my-keymap-doesn't-update-when-i-flash-it">My Keymap Doesn't Update When I Flash It</a></li><li><a href="#some-of-my-keys-are-swapped-or-not-working">Some Of My Keys Are Swapped Or Not Working</a></li><li><a href="#the-menu-key-isn't-working">The Menu Key Isn't Working</a></li><li><a href="#power-keys-aren't-working">Power Keys Aren't Working</a></li><li><a href="#one-shot-modifier">One Shot Modifier</a></li><li><a href="#modifier%2Flayer-stuck">Modifier/Layer Stuck</a></li><li><a href="#mechanical-lock-switch-support">Mechanical Lock Switch Support</a></li><li><a href="#input-special-characters-other-than-ascii-like-c%C3%A9dille-'%C3%A7'">Input Special Characters Other Than ASCII like Cédille 'Ç'</a></li><li><a href="#fn-key-on-macos">Fn Key on macOS</a></li><li><a href="#keys-supported-in-mac-osx%3F">Keys Supported in Mac OSX?</a></li><li><a href="#jis-keys-in-mac-osx">JIS Keys in Mac OSX</a></li><li><a href="#rn-42-bluetooth-doesn't-work-with-karabiner">RN-42 Bluetooth Doesn't Work with Karabiner</a></li><li><a href="#esc-and-%3Ccode%3E%60%3C%2Fcode%3E-on-a-single-key">Esc and &lt;code&gt;`&lt;/code&gt; on a Single Key</a></li><li><a href="#eject-on-mac-osx">Eject on Mac OSX</a></li><li><a href="#what-are-%22real%22-and-%22weak%22-modifiers%3F">What are &quot;Real&quot; and &quot;Weak&quot; modifiers?</a></li></ol>
+      </nav>
+          </aside>
+          <article><p>This page covers questions people often have about keymaps. If you haven't you should read <a href="keymap.md">Keymap Overview</a> first.</p>
+<h2 id="what-keycodes-can-i-use%3F" tabindex="-1">What Keycodes Can I Use?</h2>
+<p>See <a href="keycodes.md">Keycodes</a> for an index of keycodes available to you. These link to more extensive documentation when available.</p>
+<p>Keycodes are actually defined in <a href="https://github.com/qmk/qmk_firmware/blob/master/quantum/keycode.h">quantum/keycode.h</a>.</p>
+<h2 id="what-are-the-default-keycodes%3F" tabindex="-1">What Are the Default Keycodes?</h2>
+<p>There are 3 standard keyboard layouts in use around the world- ANSI, ISO, and JIS. North America primarily uses ANSI, Europe and Africa primarily use ISO, and Japan uses JIS. Regions not mentioned typically use either ANSI or ISO. The keycodes corresponding to these layouts are shown here:</p>
+<p>&lt;!-- Source for this image: https://www.keyboard-layout-editor.com/#/gists/bf431647d1001cff5eff20ae55621e9a --&gt;
+<img src="https://i.imgur.com/5wsh5wM.png" alt="Keyboard Layout Image"></p>
+<h2 id="how-can-i-make-custom-names-for-complex-keycodes%3F" tabindex="-1">How Can I Make Custom Names For Complex Keycodes?</h2>
+<p>Sometimes, for readability's sake, it's useful to define custom names for some keycodes. People often define custom names using <code>#define</code>. For example:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">FN_CAPS</span> <span class="token expression"><span class="token function">LT</span><span class="token punctuation">(</span>_FL<span class="token punctuation">,</span> KC_CAPS<span class="token punctuation">)</span></span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">ALT_TAB</span> <span class="token expression"><span class="token function">LALT</span><span class="token punctuation">(</span>KC_TAB<span class="token punctuation">)</span></span></span></code></pre>
+<p>This will allow you to use <code>FN_CAPS</code> and <code>ALT_TAB</code> in your keymap, keeping it more readable.</p>
+<h2 id="my-keymap-doesn't-update-when-i-flash-it" tabindex="-1">My Keymap Doesn't Update When I Flash It</h2>
+<p>This is usually due to VIA, and has to do with how it deals with keymaps.</p>
+<p>On first run, the VIA code in the firmware will copy the keymap from flash memory into EEPROM so that it can be rewritten at runtime by the VIA app. From this point QMK will use the keymap stored in EEPROM instead of flash, and so updates to your <code>keymap.c</code> will not be reflected.</p>
+<p>The simple fix for this is to clear the EEPROM. You can do this in several ways:</p>
+<ul>
+<li>Hold the Bootmagic Lite key (usually top left/Escape) while plugging the board in, which will also place the board into bootloader mode; then unplug and replug the board.</li>
+<li>Press the <code>QK_CLEAR_EEPROM</code>/<code>EE_CLR</code> keycode if it is accessible on your keymap.</li>
+<li>Place the board into bootloader mode and hit the &quot;Clear EEPROM&quot; button. This may not be available for all bootloaders, and you may need to reflash the board afterwards.</li>
+</ul>
+<h2 id="some-of-my-keys-are-swapped-or-not-working" tabindex="-1">Some Of My Keys Are Swapped Or Not Working</h2>
+<p>QMK has a couple of features which allow you to change the behavior of your keyboard on the fly. This includes, but is not limited to, swapping Ctrl/Caps, disabling GUI, swapping Alt/GUI, swapping Backspace/Backslash, disabling all keys, and other behavioral modifications.</p>
+<p>Refer to the EEPROM clearing methods above, which should return those keys to normal operation. If that doesn't work, look here:</p>
+<ul>
+<li><a href="keycodes_magic.md">Magic Keycodes</a></li>
+<li><a href="feature_command.md">Command</a></li>
+</ul>
+<h2 id="the-menu-key-isn't-working" tabindex="-1">The Menu Key Isn't Working</h2>
+<p>The key found on most modern keyboards that is located between <code>KC_RGUI</code> and <code>KC_RCTL</code> is actually called <code>KC_APP</code>. This is because when the key was invented, there was already a key named &quot;Menu&quot; in the HID specification, so for whatever reason, Microsoft chose to create a new key and call it &quot;Application&quot;.</p>
+<h2 id="power-keys-aren't-working" tabindex="-1">Power Keys Aren't Working</h2>
+<p>Somewhat confusingly, there are two &quot;Power&quot; keycodes in QMK: <code>KC_KB_POWER</code> in the Keyboard/Keypad HID usage page, and <code>KC_SYSTEM_POWER</code> (or <code>KC_PWR</code>) in the Consumer page.</p>
+<p>The former is only recognized on macOS, while the latter, <code>KC_SLEP</code> and <code>KC_WAKE</code> are supported by all three major operating systems, so it is recommended to use those instead. Under Windows, these keys take effect immediately, however on macOS they must be held down until a dialog appears.</p>
+<h2 id="one-shot-modifier" tabindex="-1">One Shot Modifier</h2>
+<p>Solves my personal 'the' problem. I often got 'the' or 'THe' wrongly instead of 'The'.  One Shot Shift mitigates this for me.
+https://github.com/tmk/tmk_keyboard/issues/67</p>
+<h2 id="modifier%2Flayer-stuck" tabindex="-1">Modifier/Layer Stuck</h2>
+<p>Modifier keys or layers can be stuck unless layer switching is configured properly.
+For Modifier keys and layer actions you have to place <code>KC_TRNS</code> on same position of destination layer to  unregister the modifier key or return to previous layer on release event.</p>
+<ul>
+<li>https://github.com/tmk/tmk_core/blob/master/doc/keymap.md#31-momentary-switching</li>
+<li>https://geekhack.org/index.php?topic=57008.msg1492604#msg1492604</li>
+<li>https://github.com/tmk/tmk_keyboard/issues/248</li>
+</ul>
+<h2 id="mechanical-lock-switch-support" tabindex="-1">Mechanical Lock Switch Support</h2>
+<p>This feature is for <em>mechanical lock switch</em> like <a href="https://deskthority.net/wiki/Alps_SKCL_Lock">this Alps one</a>. You can enable it by adding this to your <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LOCKING_SUPPORT_ENABLE</span></span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">LOCKING_RESYNC_ENABLE</span></span></code></pre>
+<p>After enabling this feature use keycodes <code>KC_LCAP</code>, <code>KC_LNUM</code> and <code>KC_LSCR</code> in your keymap instead.</p>
+<p>Old vintage mechanical keyboards occasionally have lock switches but modern ones don't have. <em><strong>You don't need this feature in most case and just use keycodes <code>KC_CAPS</code>, <code>KC_NUM</code> and <code>KC_SCRL</code>.</strong></em></p>
+<h2 id="input-special-characters-other-than-ascii-like-c%C3%A9dille-'%C3%A7'" tabindex="-1">Input Special Characters Other Than ASCII like Cédille 'Ç'</h2>
+<p>See the <a href="feature_unicode.md">Unicode</a> feature.</p>
+<h2 id="fn-key-on-macos" tabindex="-1"><code>Fn</code> Key on macOS</h2>
+<p>Unlike most Fn keys, the one on Apple keyboards actually has its own keycode... sort of. It takes the place of the sixth keycode in a basic 6KRO HID report -- so an Apple keyboard is in fact only 5KRO.</p>
+<p>It is technically possible to get QMK to send this key. However, doing so requires modification of the report format to add the state of the Fn key.
+Even worse, it is not recognized unless the keyboard's VID and PID match that of a real Apple keyboard. The legal issues that official QMK support for this feature may create mean it is unlikely to happen.</p>
+<p>See <a href="https://github.com/qmk/qmk_firmware/issues/2179">this issue</a> for detailed information.</p>
+<h2 id="keys-supported-in-mac-osx%3F" tabindex="-1">Keys Supported in Mac OSX?</h2>
+<p>You can know which keycodes are supported in OSX from this source code.</p>
+<p><code>usb_2_adb_keymap</code> array maps Keyboard/Keypad Page usages to ADB scancodes(OSX internal keycodes).</p>
+<p>https://opensource.apple.com/source/IOHIDFamily/IOHIDFamily-606.1.7/IOHIDFamily/Cosmo_USB2ADB.c</p>
+<p>And <code>IOHIDConsumer::dispatchConsumerEvent</code> handles Consumer page usages.</p>
+<p>https://opensource.apple.com/source/IOHIDFamily/IOHIDFamily-606.1.7/IOHIDFamily/IOHIDConsumer.cpp</p>
+<h2 id="jis-keys-in-mac-osx" tabindex="-1">JIS Keys in Mac OSX</h2>
+<p>Japanese JIS keyboard specific keys like <code>無変換(Muhenkan)</code>, <code>変換(Henkan)</code>, <code>ひらがな(hiragana)</code> are not recognized on OSX. You can use <strong>Seil</strong> to enable those keys, try following options.</p>
+<ul>
+<li>Enable NFER Key on PC keyboard</li>
+<li>Enable XFER Key on PC keyboard</li>
+<li>Enable KATAKANA Key on PC keyboard</li>
+</ul>
+<p>https://pqrs.org/osx/karabiner/seil.html</p>
+<h2 id="rn-42-bluetooth-doesn't-work-with-karabiner" tabindex="-1">RN-42 Bluetooth Doesn't Work with Karabiner</h2>
+<p>Karabiner - Keymapping tool on Mac OSX - ignores inputs from RN-42 module by default. You have to enable this option to make Karabiner working with your keyboard.
+https://github.com/tekezo/Karabiner/issues/403#issuecomment-102559237</p>
+<p>See these for the detail of this problem.
+https://github.com/tmk/tmk_keyboard/issues/213
+https://github.com/tekezo/Karabiner/issues/403</p>
+<h2 id="esc-and-%3Ccode%3E%60%3C%2Fcode%3E-on-a-single-key" tabindex="-1">Esc and &lt;code&gt;`&lt;/code&gt; on a Single Key</h2>
+<p>See the <a href="feature_grave_esc.md">Grave Escape</a> feature.</p>
+<h2 id="eject-on-mac-osx" tabindex="-1">Eject on Mac OSX</h2>
+<p><code>KC_EJCT</code> keycode works on OSX. https://github.com/tmk/tmk_keyboard/issues/250
+It seems Windows 10 ignores the code and Linux/Xorg recognizes but has no mapping by default.</p>
+<p>Not sure what keycode Eject is on genuine Apple keyboard actually. HHKB uses <code>F20</code> for Eject key(<code>Fn+F</code>) on Mac mode but this is not same as Apple Eject keycode probably.</p>
+<h2 id="what-are-%22real%22-and-%22weak%22-modifiers%3F" tabindex="-1">What are &quot;Real&quot; and &quot;Weak&quot; modifiers?</h2>
+<p>Real modifiers refer to the state of the real/physical modifier keys, while weak modifiers are the state of &quot;virtual&quot; or temporary modifiers which should not interfere with the internal state of the real modifier keys.</p>
+<p>The real and weak modifier states are ORed together when the keyboard report is sent, so if you release a weak modifier while the same real modifier is still held, the report does not change:</p>
+<ol>
+<li><strong>Hold down physical Left Shift:</strong> Real mods now contains Left Shift, final state is Left Shift</li>
+<li><strong>Add weak Left Shift:</strong> Weak mods now contains Left Shift, final state is Left Shift</li>
+<li><strong>Remove weak Left Shift:</strong> Weak mods now contains nothing, final state is Left Shift</li>
+<li><strong>Release physical Left Shift:</strong> Real mods now contains nothing, final state is nothing</li>
+</ol>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

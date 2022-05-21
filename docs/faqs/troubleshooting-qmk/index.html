@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Troubleshooting QMK</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Troubleshooting QMK</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#how-do-i-test-my-keyboard%3F-%3Aid%3Dtesting">How do I test my keyboard? :id=testing</a></li><li><a href="#safety-considerations">Safety Considerations</a></li><li><a href="#nkro-doesn't-work">NKRO Doesn't work</a></li><li><a href="#trackpoint-needs-reset-circuit-(ps%2F2-mouse-support)">TrackPoint Needs Reset Circuit (PS/2 Mouse Support)</a></li><li><a href="#can't-read-column-of-matrix-beyond-16">Can't Read Column of Matrix Beyond 16</a></li><li><a href="#special-extra-key-doesn't-work-(system%2C-audio-control-keys)">Special Extra Key Doesn't Work (System, Audio Control Keys)</a></li><li><a href="#wake-from-sleep-doesn't-work">Wake from Sleep Doesn't Work</a></li><li><a href="#using-arduino%3F">Using Arduino?</a></li><li><a href="#enabling-jtag">Enabling JTAG</a></li><li><a href="#usb-3-compatibility">USB 3 Compatibility</a></li><li><a href="#mac-compatibility">Mac Compatibility</a><ol><li><a href="#os-x-10.11-and-hub">OS X 10.11 and Hub</a></li></ol></li><li><a href="#problem-in-bios-(uefi)-setup%2Fresume-(sleep-%26-wake)%2Fpower-cycles">Problem in BIOS (UEFI) Setup/Resume (Sleep &amp; Wake)/Power Cycles</a></li></ol>
+      </nav>
+          </aside>
+          <article><h1 id="miscellaneous-faq" tabindex="-1">Miscellaneous FAQ</h1>
+<h2 id="how-do-i-test-my-keyboard%3F-%3Aid%3Dtesting" tabindex="-1">How do I test my keyboard? :id=testing</h2>
+<p>Testing your keyboard is usually pretty straightforward. Press every single key and make sure it sends the keys you expect. You can use <a href="https://config.qmk.fm/#/test/">QMK Configurator</a>'s test mode to check your keyboard, even if it doesn't run QMK.</p>
+<h2 id="safety-considerations" tabindex="-1">Safety Considerations</h2>
+<p>You probably don't want to &quot;brick&quot; your keyboard, making it impossible
+to rewrite firmware onto it.  Here are some of the parameters to show
+what things are (and likely aren't) too risky.</p>
+<ul>
+<li>If your keyboard map does not include RESET, then, to get into DFU
+mode, you will need to press the reset button on the PCB, which
+requires unscrewing the bottom.</li>
+<li>Messing with tmk_core / common files might make the keyboard
+inoperable</li>
+<li>Too large a .hex file is trouble; <code>make dfu</code> will erase the block,
+test the size (oops, wrong order!), which errors out, failing to
+flash the keyboard, leaving it in DFU mode.
+<ul>
+<li>To this end, note that the maximum .hex file size on e.g. Planck
+is 7000h (28672 decimal)</li>
+</ul>
+</li>
+</ul>
+<pre><code>Linking: .build/planck_rev4_cbbrowne.elf                                                            [OK]
+Creating load file for Flash: .build/planck_rev4_cbbrowne.hex                                       [OK]
+
+Size after:
+   text    data     bss     dec     hex filename
+      0   22396       0   22396    577c planck_rev4_cbbrowne.hex
+</code></pre>
+<ul>
+<li>The above file is of size 22396/577ch, which is less than
+28672/7000h</li>
+<li>As long as you have a suitable alternative .hex file around, you
+can retry, loading that one</li>
+<li>Some of the options you might specify in your keyboard's Makefile
+consume extra memory; watch out for BOOTMAGIC_ENABLE,
+MOUSEKEY_ENABLE, EXTRAKEY_ENABLE, CONSOLE_ENABLE</li>
+<li>DFU tools do /not/ allow you to write into the bootloader (unless
+you throw in an extra fruit salad of options), so there is little risk
+there.</li>
+<li>EEPROM has around a 100000 (100k) write cycle.  You shouldn't rewrite
+the firmware repeatedly and continually; that'll burn the EEPROM
+eventually.</li>
+</ul>
+<h2 id="nkro-doesn't-work" tabindex="-1">NKRO Doesn't work</h2>
+<p>First you have to compile firmware with the build option <code>NKRO_ENABLE</code> in <strong>Makefile</strong>.</p>
+<p>Try <code>Magic</code> <strong>N</strong> command(<code>LShift+RShift+N</code> by default) when <strong>NKRO</strong> still doesn't work. You can use this command to toggle between <strong>NKRO</strong> and <strong>6KRO</strong> mode temporarily. In some situations <strong>NKRO</strong> doesn't work and you will need to switch to <strong>6KRO</strong> mode, in particular when you are in BIOS.</p>
+<h2 id="trackpoint-needs-reset-circuit-(ps%2F2-mouse-support)" tabindex="-1">TrackPoint Needs Reset Circuit (PS/2 Mouse Support)</h2>
+<p>Without reset circuit you will have inconsistent result due to improper initialization of the hardware. See circuit schematic of TPM754:</p>
+<ul>
+<li>https://geekhack.org/index.php?topic=50176.msg1127447#msg1127447</li>
+<li>https://www.mikrocontroller.net/attachment/52583/tpm754.pdf</li>
+</ul>
+<h2 id="can't-read-column-of-matrix-beyond-16" tabindex="-1">Can't Read Column of Matrix Beyond 16</h2>
+<p>Use <code>1UL&lt;&lt;16</code> instead of <code>1&lt;&lt;16</code> in <code>read_cols()</code> in [matrix.h] when your columns goes beyond 16.</p>
+<p>In C <code>1</code> means one of [int] type which is [16 bit] in case of AVR, so you can't shift left more than 15. Thus, calculating <code>1&lt;&lt;16</code> will unexpectedly equal zero. To work around this, you have to use [unsigned long] type with <code>1UL</code>.</p>
+<p>https://deskthority.net/workshop-f7/rebuilding-and-redesigning-a-classic-thinkpad-keyboard-t6181-60.html#p146279</p>
+<h2 id="special-extra-key-doesn't-work-(system%2C-audio-control-keys)" tabindex="-1">Special Extra Key Doesn't Work (System, Audio Control Keys)</h2>
+<p>You need to define <code>EXTRAKEY_ENABLE</code> in <code>rules.mk</code> to use them in QMK.</p>
+<pre><code>EXTRAKEY_ENABLE = yes          # Audio control and System control
+</code></pre>
+<h2 id="wake-from-sleep-doesn't-work" tabindex="-1">Wake from Sleep Doesn't Work</h2>
+<p>In Windows check <code>Allow this device to wake the computer</code> setting in <strong>Power Management</strong> property tab of <strong>Device Manager</strong>. Also check your BIOS settings. Pressing any key during sleep should wake host.</p>
+<h2 id="using-arduino%3F" tabindex="-1">Using Arduino?</h2>
+<p><strong>Note that Arduino pin naming is different from actual chip.</strong> For example, Arduino pin <code>D0</code> is not <code>PD0</code>. Check circuit with its schematics yourself.</p>
+<ul>
+<li>https://arduino.cc/en/uploads/Main/arduino-leonardo-schematic_3b.pdf</li>
+<li>https://arduino.cc/en/uploads/Main/arduino-micro-schematic.pdf</li>
+</ul>
+<p>Arduino Leonardo and micro have <strong>ATMega32U4</strong> and can be used for TMK, though Arduino bootloader may be a problem.</p>
+<h2 id="enabling-jtag" tabindex="-1">Enabling JTAG</h2>
+<p>By default, the JTAG debugging interface is disabled as soon as the keyboard starts up. JTAG-capable MCUs come from the factory with the <code>JTAGEN</code> fuse set, and it takes over certain pins of the MCU that the board may be using for the switch matrix, LEDs, etc.</p>
+<p>If you would like to keep JTAG enabled, just add the following to your <code>config.h</code>:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">NO_JTAG_DISABLE</span></span></code></pre>
+<h2 id="usb-3-compatibility" tabindex="-1">USB 3 Compatibility</h2>
+<p>Some problems can be fixed by switching from a USB 3.x port to a USB 2.0 port.</p>
+<h2 id="mac-compatibility" tabindex="-1">Mac Compatibility</h2>
+<h3 id="os-x-10.11-and-hub" tabindex="-1">OS X 10.11 and Hub</h3>
+<p>See here: https://geekhack.org/index.php?topic=14290.msg1884034#msg1884034</p>
+<h2 id="problem-in-bios-(uefi)-setup%2Fresume-(sleep-%26-wake)%2Fpower-cycles" tabindex="-1">Problem in BIOS (UEFI) Setup/Resume (Sleep &amp; Wake)/Power Cycles</h2>
+<p>Some people reported their keyboard stops working in BIOS and/or after resume(power cycles).</p>
+<p>As of now the root cause is not clear, but some build options seem to be related. In Makefile, try to disable options like <code>CONSOLE_ENABLE</code>, <code>NKRO_ENABLE</code>, <code>SLEEP_LED_ENABLE</code> and/or others.</p>
+<p>More info:</p>
+<ul>
+<li>https://github.com/tmk/tmk_keyboard/issues/266</li>
+<li>https://geekhack.org/index.php?topic=41989.msg1967778#msg1967778</li>
+</ul>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

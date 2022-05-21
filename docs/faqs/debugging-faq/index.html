@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Debugging FAQ</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Debugging FAQ</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#debugging-%3Aid%3Ddebugging">Debugging :id=debugging</a></li><li><a href="#debugging-tools">Debugging Tools</a><ol><li><a href="#debugging-with-qmk-toolbox">Debugging With QMK Toolbox</a></li><li><a href="#debugging-with-qmk-cli">Debugging with QMK CLI</a></li><li><a href="#debugging-with-hid_listen">Debugging With hid_listen</a></li></ol></li><li><a href="#sending-your-own-debug-messages-%3Aid%3Ddebug-api">Sending Your Own Debug Messages :id=debug-api</a></li><li><a href="#debug-examples">Debug Examples</a><ol><li><a href="#which-matrix-position-is-this-keypress%3F">Which matrix position is this keypress?</a></li><li><a href="#how-long-did-it-take-to-scan-for-a-keypress%3F">How long did it take to scan for a keypress?</a></li></ol></li><li><a href="#hid_listen-can't-recognize-device">hid_listen Can't Recognize Device</a></li><li><a href="#can't-get-message-on-console">Can't Get Message on Console</a></li></ol>
+      </nav>
+          </aside>
+          <article><p>This page details various common questions people have about troubleshooting their keyboards.</p>
+<h2 id="debugging-%3Aid%3Ddebugging" tabindex="-1">Debugging :id=debugging</h2>
+<p>Your keyboard will output debug information if you have <code>CONSOLE_ENABLE = yes</code> in your <code>rules.mk</code>. By default the output is very limited, but you can turn on debug mode to increase the amount of debug output. Use the <code>DEBUG</code> keycode in your keymap, use the <a href="feature_command.md">Command</a> feature to enable debug mode, or add the following code to your keymap.</p>
+<pre class="language-c"><code class="language-c"><span class="token keyword">void</span> <span class="token function">keyboard_post_init_user</span><span class="token punctuation">(</span><span class="token keyword">void</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token comment">// Customise these values to desired behaviour</span><br>  debug_enable<span class="token operator">=</span>true<span class="token punctuation">;</span><br>  debug_matrix<span class="token operator">=</span>true<span class="token punctuation">;</span><br>  <span class="token comment">//debug_keyboard=true;</span><br>  <span class="token comment">//debug_mouse=true;</span><br><span class="token punctuation">}</span></code></pre>
+<h2 id="debugging-tools" tabindex="-1">Debugging Tools</h2>
+<p>Various tools are available to debug your keyboard.</p>
+<h3 id="debugging-with-qmk-toolbox" tabindex="-1">Debugging With QMK Toolbox</h3>
+<p>For compatible platforms, <a href="https://github.com/qmk/qmk_toolbox">QMK Toolbox</a> can be used to display debug messages from your keyboard.</p>
+<h3 id="debugging-with-qmk-cli" tabindex="-1">Debugging with QMK CLI</h3>
+<p>Prefer a terminal based solution? The <a href="cli_commands.md#qmk-console">QMK CLI console command</a> can be used to display debug messages from your keyboard.</p>
+<h3 id="debugging-with-hid_listen" tabindex="-1">Debugging With hid_listen</h3>
+<p>Something stand-alone? <a href="https://www.pjrc.com/teensy/hid_listen.html">hid_listen</a>, provided by PJRC, can also be used to display debug messages. Prebuilt binaries for Windows,Linux,and MacOS are available.</p>
+<h2 id="sending-your-own-debug-messages-%3Aid%3Ddebug-api" tabindex="-1">Sending Your Own Debug Messages :id=debug-api</h2>
+<p>Sometimes it's useful to print debug messages from within your <a href="custom_quantum_functions.md">custom code</a>. Doing so is pretty simple. Start by including <code>print.h</code> at the top of your file:</p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">include</span> <span class="token string">"print.h"</span></span></code></pre>
+<p>After that you can use a few different print functions:</p>
+<ul>
+<li><code>print(&quot;string&quot;)</code>: Print a simple string.</li>
+<li><code>uprintf(&quot;%s string&quot;, var)</code>: Print a formatted string</li>
+<li><code>dprint(&quot;string&quot;)</code> Print a simple string, but only when debug mode is enabled</li>
+<li><code>dprintf(&quot;%s string&quot;, var)</code>: Print a formatted string, but only when debug mode is enabled</li>
+</ul>
+<h2 id="debug-examples" tabindex="-1">Debug Examples</h2>
+<p>Below is a collection of real world debugging examples. For additional information, refer to <a href="faq_debug.md">Debugging/Troubleshooting QMK</a>.</p>
+<h3 id="which-matrix-position-is-this-keypress%3F" tabindex="-1">Which matrix position is this keypress?</h3>
+<p>When porting, or when attempting to diagnose pcb issues, it can be useful to know if a keypress is scanned correctly. To enable logging for this scenario, add the following code to your keymaps <code>keymap.c</code></p>
+<pre class="language-c"><code class="language-c">bool <span class="token function">process_record_user</span><span class="token punctuation">(</span><span class="token class-name">uint16_t</span> keycode<span class="token punctuation">,</span> <span class="token class-name">keyrecord_t</span> <span class="token operator">*</span>record<span class="token punctuation">)</span> <span class="token punctuation">{</span><br>  <span class="token comment">// If console is enabled, it will print the matrix position and status of each key pressed</span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">ifdef</span> <span class="token expression">CONSOLE_ENABLE</span></span><br>    <span class="token function">uprintf</span><span class="token punctuation">(</span><span class="token string">"KL: kc: 0x%04X, col: %u, row: %u, pressed: %b, time: %u, interrupt: %b, count: %u\n"</span><span class="token punctuation">,</span> keycode<span class="token punctuation">,</span> record<span class="token operator">-></span>event<span class="token punctuation">.</span>key<span class="token punctuation">.</span>col<span class="token punctuation">,</span> record<span class="token operator">-></span>event<span class="token punctuation">.</span>key<span class="token punctuation">.</span>row<span class="token punctuation">,</span> record<span class="token operator">-></span>event<span class="token punctuation">.</span>pressed<span class="token punctuation">,</span> record<span class="token operator">-></span>event<span class="token punctuation">.</span>time<span class="token punctuation">,</span> record<span class="token operator">-></span>tap<span class="token punctuation">.</span>interrupted<span class="token punctuation">,</span> record<span class="token operator">-></span>tap<span class="token punctuation">.</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span><br><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">endif</span> </span><br>  <span class="token keyword">return</span> true<span class="token punctuation">;</span><br><span class="token punctuation">}</span></code></pre>
+<p>Example output</p>
+<pre><code>Waiting for device:.......
+Listening:
+KL: kc: 169, col: 0, row: 0, pressed: 1
+KL: kc: 169, col: 0, row: 0, pressed: 0
+KL: kc: 174, col: 1, row: 0, pressed: 1
+KL: kc: 174, col: 1, row: 0, pressed: 0
+KL: kc: 172, col: 2, row: 0, pressed: 1
+KL: kc: 172, col: 2, row: 0, pressed: 0
+</code></pre>
+<h3 id="how-long-did-it-take-to-scan-for-a-keypress%3F" tabindex="-1">How long did it take to scan for a keypress?</h3>
+<p>When testing performance issues, it can be useful to know the frequency at which the switch matrix is being scanned. To enable logging for this scenario, add the following code to your keymaps <code>config.h</code></p>
+<pre class="language-c"><code class="language-c"><span class="token macro property"><span class="token directive-hash">#</span><span class="token directive keyword">define</span> <span class="token macro-name">DEBUG_MATRIX_SCAN_RATE</span></span></code></pre>
+<p>Example output</p>
+<pre><code>  &gt; matrix scan frequency: 315
+  &gt; matrix scan frequency: 313
+  &gt; matrix scan frequency: 316
+  &gt; matrix scan frequency: 316
+  &gt; matrix scan frequency: 316
+  &gt; matrix scan frequency: 316
+</code></pre>
+<h2 id="hid_listen-can't-recognize-device" tabindex="-1"><code>hid_listen</code> Can't Recognize Device</h2>
+<p>When debug console of your device is not ready you will see like this:</p>
+<pre><code>Waiting for device:.........
+</code></pre>
+<p>Once the device is plugged in then <em>hid_listen</em> finds it you will get this message:</p>
+<pre><code>Waiting for new device:.........................
+Listening:
+</code></pre>
+<p>If you can't get this 'Listening:' message try building with <code>CONSOLE_ENABLE=yes</code> in [Makefile]</p>
+<p>You may need privileges to access the device an OS like Linux. Try <code>sudo hid_listen</code>.</p>
+<p>On many Linux distros you can avoid having to run hid_listen as root
+by creating a file called <code>/etc/udev/rules.d/70-hid-listen.rules</code> with
+the following content:</p>
+<pre><code>SUBSYSTEM==&quot;hidraw&quot;, ATTRS{idVendor}==&quot;abcd&quot;, ATTRS{idProduct}==&quot;def1&quot;, TAG+=&quot;uaccess&quot;, RUN{builtin}+=&quot;uaccess&quot;
+</code></pre>
+<p>Replace abcd and def1 with your keyboard's vendor and product id,
+letters must be lowercase. The <code>RUN{builtin}+=&quot;uaccess&quot;</code> part is only
+needed for older distros.</p>
+<h2 id="can't-get-message-on-console" tabindex="-1">Can't Get Message on Console</h2>
+<p>Check:</p>
+<ul>
+<li><em>hid_listen</em> finds your device. See above.</li>
+<li>Enable debug by pressing <strong>Magic</strong>+d. See <a href="https://github.com/tmk/tmk_keyboard#magic-commands">Magic Commands</a>.</li>
+<li>Set <code>debug_enable=true</code>. See <a href="#debugging">Debugging</a></li>
+<li>Try using <code>print</code> function instead of debug print. See <strong>common/print.h</strong>.</li>
+<li>Disconnect other devices with console function. See <a href="https://github.com/tmk/tmk_keyboard/issues/97">Issue #97</a>.</li>
+</ul>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

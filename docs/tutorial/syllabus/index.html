@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>QMK Syllabus</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>QMK Syllabus</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#beginning-topics">Beginning Topics</a><ol><li><a href="#learn-how-to-use-qmk-tools">Learn How To Use QMK Tools</a></li><li><a href="#learn-about-keymaps">Learn About Keymaps</a></li><li><a href="#configuring-ides---optional">Configuring IDEs - Optional</a></li></ol></li><li><a href="#intermediate-topics">Intermediate Topics</a><ol><li><a href="#learn-how-to-configure-features">Learn How To Configure Features</a></li><li><a href="#learn-more-about-keymaps">Learn More About Keymaps</a></li></ol></li><li><a href="#advanced-topics">Advanced Topics</a><ol><li><a href="#maintaining-keyboards-within-qmk">Maintaining Keyboards Within QMK</a></li><li><a href="#advanced-features">Advanced Features</a></li><li><a href="#hardware">Hardware</a></li><li><a href="#core-development">Core Development</a></li><li><a href="#cli-development">CLI Development</a></li></ol></li></ol>
+      </nav>
+          </aside>
+          <article><p>This page helps you build up your QMK knowledge by introducing the basics first and guiding you to understanding all the concepts you need to know to be proficient with QMK.</p>
+<h3 id="beginning-topics" tabindex="-1">Beginning Topics</h3>
+<p>If you read nothing else you should read the documents in this section. After reading the <a href="newbs.md">Tutorial</a> you should be able to create a basic keymap, compile it, and flash it to your keyboard. The remaining documents will flesh out your knowledge of these basics.</p>
+<h4 id="learn-how-to-use-qmk-tools" tabindex="-1"><strong>Learn How To Use QMK Tools</strong></h4>
+<ul>
+<li><a href="../newbs">Tutorial</a></li>
+<li><a href="cli.md">CLI</a></li>
+<li><a href="newbs_git_best_practices.md">GIT</a></li>
+</ul>
+<h4 id="learn-about-keymaps" tabindex="-1"><strong>Learn About Keymaps</strong></h4>
+<ul>
+<li><a href="feature_layers.md">Layers</a></li>
+<li><a href="keycodes.md">Keycodes</a>
+<ul>
+<li>The full list of keycodes you can use. Note that some may require knowledge found in the Intermediate or Advanced Topics.</li>
+</ul>
+</li>
+</ul>
+<h4 id="configuring-ides---optional" tabindex="-1"><strong>Configuring IDEs</strong> - Optional</h4>
+<ul>
+<li><a href="other_eclipse.md">Eclipse</a></li>
+<li><a href="other_vscode.md">VS Code</a></li>
+</ul>
+<h3 id="intermediate-topics" tabindex="-1">Intermediate Topics</h3>
+<p>These topics start to dig into some of the features that QMK supports. You don't have to read all of these documents, but some of the documents in the Advanced Topics section won't make sense if you skip over some of these.</p>
+<h4 id="learn-how-to-configure-features" tabindex="-1"><strong>Learn How To Configure Features</strong></h4>
+<p>&lt;!-- * Configuration Overview  FIXME(skullydazed/anyone): write this document --&gt;</p>
+<ul>
+<li><a href="feature_audio.md">Audio</a></li>
+<li>Lighting
+<ul>
+<li><a href="feature_backlight.md">Backlight</a></li>
+<li><a href="feature_led_matrix.md">LED Matrix</a></li>
+<li><a href="feature_rgblight.md">RGB Lighting</a></li>
+<li><a href="feature_rgb_matrix.md">RGB Matrix</a></li>
+</ul>
+</li>
+<li><a href="tap_hold.md">Tap-Hold Configuration</a></li>
+<li><a href="squeezing_avr.md">Squeezing Space from AVR</a></li>
+</ul>
+<h4 id="learn-more-about-keymaps" tabindex="-1"><strong>Learn More About Keymaps</strong></h4>
+<ul>
+<li><a href="keymap.md">Keymaps</a></li>
+<li><a href="custom_quantum_functions.md">Custom Functions and Keycodes</a></li>
+<li>Macros
+<ul>
+<li><a href="feature_dynamic_macros.md">Dynamic Macros</a></li>
+<li><a href="feature_macros.md">Compiled Macros</a></li>
+</ul>
+</li>
+<li><a href="feature_tap_dance.md">Tap Dance</a></li>
+<li><a href="feature_combo.md">Combos</a></li>
+<li><a href="feature_userspace.md">Userspace</a></li>
+<li><a href="feature_key_overrides.md">Key Overrides</a></li>
+</ul>
+<h3 id="advanced-topics" tabindex="-1">Advanced Topics</h3>
+<p>Everything below here requires a lot of foundational knowledge. Besides being able to create keymaps using advanced features you should be familiar with using both <code>config.h</code> and <code>rules.mk</code> to configure options for your keyboard.</p>
+<h4 id="maintaining-keyboards-within-qmk" tabindex="-1"><strong>Maintaining Keyboards Within QMK</strong></h4>
+<ul>
+<li><a href="hand_wire.md">Handwiring a Keyboard</a></li>
+<li><a href="hardware_keyboard_guidelines.md">Keyboard Guidelines</a></li>
+<li><a href="reference_info_json.md">info.json Reference</a></li>
+<li><a href="feature_debounce_type.md">Debounce API</a></li>
+</ul>
+<h4 id="advanced-features" tabindex="-1"><strong>Advanced Features</strong></h4>
+<ul>
+<li><a href="feature_unicode.md">Unicode</a></li>
+<li><a href="api_overview.md">API</a></li>
+<li><a href="feature_bootmagic.md">Bootmagic Lite</a></li>
+</ul>
+<h4 id="hardware" tabindex="-1"><strong>Hardware</strong></h4>
+<ul>
+<li><a href="how_keyboards_work.md">How Keyboards Work</a></li>
+<li><a href="how_a_matrix_works.md">How A Keyboard Matrix Works</a></li>
+<li><a href="feature_split_keyboard.md">Split Keyboards</a></li>
+<li><a href="feature_stenography.md">Stenography</a></li>
+<li><a href="feature_pointing_device.md">Pointing Devices</a></li>
+</ul>
+<h4 id="core-development" tabindex="-1"><strong>Core Development</strong></h4>
+<ul>
+<li><a href="coding_conventions_c.md">Coding Conventions</a></li>
+<li><a href="compatible_microcontrollers.md">Compatible Microcontrollers</a></li>
+<li><a href="custom_matrix.md">Custom Matrix</a></li>
+<li><a href="understanding_qmk.md">Understanding QMK</a></li>
+</ul>
+<h4 id="cli-development" tabindex="-1"><strong>CLI Development</strong></h4>
+<ul>
+<li><a href="coding_conventions_python.md">Coding Conventions</a></li>
+<li><a href="cli_development.md">CLI Development Overview</a></li>
+</ul>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

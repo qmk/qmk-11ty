@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Setup</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Setup</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#1.-prerequisites">1. Prerequisites</a></li><li><a href="#2.-prepare-your-build-environment-%3Aid%3Dset-up-your-environment">2. Prepare Your Build Environment :id=set-up-your-environment</a><ol><li><a href="#**-windows-**">** Windows **</a><ol><li><a href="#prerequisites">Prerequisites</a></li><li><a href="#prerequisites-1">Prerequisites</a></li><li><a href="#installation">Installation</a></li></ol></li><li><a href="#**-macos-**">** macOS **</a><ol><li><a href="#prerequisites-2">Prerequisites</a></li><li><a href="#installation-1">Installation</a></li></ol></li><li><a href="#**-linux%2Fwsl-**">** Linux/WSL **</a><ol><li><a href="#prerequisites-3">Prerequisites</a></li><li><a href="#installation-2">Installation</a></li><li><a href="#community-packages">Community Packages</a></li></ol></li><li><a href="#**-freebsd-**">** FreeBSD **</a><ol><li><a href="#installation-3">Installation</a></li></ol></li></ol></li><li><a href="#3.-run-qmk-setup-%3Aid%3Dset-up-qmk">3. Run QMK Setup :id=set-up-qmk</a><ol><li><a href="#**-windows-**-1">** Windows **</a></li><li><a href="#**-macos-**-1">** macOS **</a></li><li><a href="#**-linux%2Fwsl-**-1">** Linux/WSL **</a></li><li><a href="#**-freebsd-**-1">** FreeBSD **</a></li></ol></li><li><a href="#4.-test-your-build-environment">4. Test Your Build Environment</a></li></ol>
+      </nav>
+          </aside>
+          <article><h1 id="setting-up-your-qmk-environment" tabindex="-1">Setting Up Your QMK Environment</h1>
+<p>Before you can build keymaps, you need to install some software and set up your build environment. This only has to be done once no matter how many keyboards you plan to compile firmware for.</p>
+<h2 id="1.-prerequisites" tabindex="-1">1. Prerequisites</h2>
+<p>There are a few pieces of software you'll need to get started.</p>
+<ul>
+<li><a href="newbs_learn_more_resources.md#text-editor-resources">Text editor</a>
+<ul>
+<li>You’ll need a program that can edit and save plain text files. The default editor that comes with many OS's does not save plain text files, so you'll need to make sure that whatever editor you chose does.</li>
+</ul>
+</li>
+<li><a href="https://github.com/qmk/qmk_toolbox">Toolbox (optional)</a>
+<ul>
+<li>A graphical program for Windows and macOS that allows you to both program and debug your custom keyboard</li>
+</ul>
+</li>
+</ul>
+<p>?&gt; If you haven't worked with the Linux/Unix command line before, there are a few basic concepts and commands you should learn. <a href="newbs_learn_more_resources.md#command-line-resources">These resources</a> will teach you enough to be able to work with QMK.</p>
+<h2 id="2.-prepare-your-build-environment-%3Aid%3Dset-up-your-environment" tabindex="-1">2. Prepare Your Build Environment :id=set-up-your-environment</h2>
+<p>We've tried to make QMK as easy to set up as possible. You only have to prepare your Linux or Unix environment, then let QMK install the rest.</p>
+<p>&lt;!-- tabs:start --&gt;</p>
+<h3 id="**-windows-**" tabindex="-1">** Windows **</h3>
+<p>QMK maintains a Bundle of MSYS2, the CLI and all necessary dependencies. It also provides a handy <code>QMK MSYS</code> terminal shortcut to boot you directly into the correct environment.</p>
+<h4 id="prerequisites" tabindex="-1">Prerequisites</h4>
+<p>You will need to install <a href="https://msys.qmk.fm/">QMK MSYS</a>. The latest release is available <a href="https://github.com/qmk/qmk_distro_msys/releases/latest">here</a>.</p>
+<p>Alternatively, if you'd like to manually install MSYS2, the following section will walk you through the process.</p>
+<p>&lt;details&gt;
+&lt;summary&gt;Manual Install&lt;/summary&gt;</p>
+<p>?&gt; Ignore the following steps if you use <code>QMK MSYS</code>.</p>
+<h4 id="prerequisites-1" tabindex="-1">Prerequisites</h4>
+<p>You will need to install MSYS2, Git and Python. Follow the installation instructions on https://www.msys2.org.</p>
+<p>Once MSYS2 is installed, close any open MSYS terminals and open a new MinGW 64-bit terminal.</p>
+<p>!&gt; <strong>NOTE:</strong> The MinGW 64-bit terminal is <em>not</em> the same as the MSYS terminal that opens when installation is completed. Your prompt should say &quot;MINGW64&quot; in purple text, rather than &quot;MSYS&quot;. See <a href="https://www.msys2.org/wiki/MSYS2-introduction/#subsystems">this page</a> for more information on the differences.</p>
+<p>Then run the following command:</p>
+<pre><code>pacman --needed --noconfirm --disable-download-timeout -S git mingw-w64-x86_64-toolchain mingw-w64-x86_64-python3-pip
+</code></pre>
+<h4 id="installation" tabindex="-1">Installation</h4>
+<p>Install the QMK CLI by running:</p>
+<pre><code>python3 -m pip install qmk
+</code></pre>
+<p>&lt;/details&gt;</p>
+<h3 id="**-macos-**" tabindex="-1">** macOS **</h3>
+<p>QMK maintains a Homebrew tap and formula which will automatically install the CLI and all necessary dependencies.</p>
+<h4 id="prerequisites-2" tabindex="-1">Prerequisites</h4>
+<p>You will need to install Homebrew. Follow the instructions on https://brew.sh.</p>
+<h4 id="installation-1" tabindex="-1">Installation</h4>
+<p>Install the QMK CLI by running:</p>
+<pre><code>brew install qmk/qmk/qmk
+</code></pre>
+<h3 id="**-linux%2Fwsl-**" tabindex="-1">** Linux/WSL **</h3>
+<p>?&gt; <strong>Note for WSL users</strong>: By default, the installation process will clone the QMK repository into your WSL home directory, but if you have cloned manually, ensure that it is located inside the WSL instance instead of the Windows filesystem (ie. not in <code>/mnt</code>), as accessing it is currently <a href="https://github.com/microsoft/WSL/issues/4197">extremely slow</a>.</p>
+<h4 id="prerequisites-3" tabindex="-1">Prerequisites</h4>
+<p>You will need to install Git and Python. It's very likely that you already have both, but if not, one of the following commands should install them:</p>
+<ul>
+<li>Debian / Ubuntu / Devuan: <code>sudo apt install -y git python3-pip</code></li>
+<li>Fedora / Red Hat / CentOS: <code>sudo yum -y install git python3-pip</code></li>
+<li>Arch / Manjaro: <code>sudo pacman --needed --noconfirm -S git python-pip libffi</code></li>
+<li>Void: <code>sudo xbps-install -y git python3-pip</code></li>
+<li>Solus: <code>sudo eopkg -y install git python3</code></li>
+<li>Sabayon: <code>sudo equo install dev-vcs/git dev-python/pip</code></li>
+<li>Gentoo: <code>sudo emerge dev-vcs/git dev-python/pip</code></li>
+</ul>
+<h4 id="installation-2" tabindex="-1">Installation</h4>
+<p>Install the QMK CLI by running:</p>
+<pre><code>python3 -m pip install --user qmk
+</code></pre>
+<h4 id="community-packages" tabindex="-1">Community Packages</h4>
+<p>These packages are maintained by community members, so may not be up to date or completely functional. If you encounter problems, please report them to their respective maintainers.</p>
+<p>On Arch-based distros you can install the CLI from the official repositories (NOTE: at the time of writing this package marks some dependencies as optional that should not be):</p>
+<pre><code>sudo pacman -S qmk
+</code></pre>
+<p>You can also try the <code>qmk-git</code> package from AUR:</p>
+<pre><code>yay -S qmk-git
+</code></pre>
+<h3 id="**-freebsd-**" tabindex="-1">** FreeBSD **</h3>
+<h4 id="installation-3" tabindex="-1">Installation</h4>
+<p>Install the FreeBSD package for QMK CLI by running:</p>
+<pre><code>pkg install -g &quot;py*-qmk&quot;
+</code></pre>
+<p>NOTE: remember to follow the instructions printed at the end of installation (use <code>pkg info -Dg &quot;py*-qmk&quot;</code> to show them again).</p>
+<p>&lt;!-- tabs:end --&gt;</p>
+<h2 id="3.-run-qmk-setup-%3Aid%3Dset-up-qmk" tabindex="-1">3. Run QMK Setup :id=set-up-qmk</h2>
+<p>&lt;!-- tabs:start --&gt;</p>
+<h3 id="**-windows-**-1" tabindex="-1">** Windows **</h3>
+<p>After installing QMK you can set it up with this command:</p>
+<pre><code>qmk setup
+</code></pre>
+<p>In most situations you will want to answer <code>y</code> to all of the prompts.</p>
+<h3 id="**-macos-**-1" tabindex="-1">** macOS **</h3>
+<p>After installing QMK you can set it up with this command:</p>
+<pre><code>qmk setup
+</code></pre>
+<p>In most situations you will want to answer <code>y</code> to all of the prompts.</p>
+<h3 id="**-linux%2Fwsl-**-1" tabindex="-1">** Linux/WSL **</h3>
+<p>After installing QMK you can set it up with this command:</p>
+<pre><code>qmk setup
+</code></pre>
+<p>In most situations you will want to answer <code>y</code> to all of the prompts.</p>
+<p>?&gt;<strong>Note on Debian, Ubuntu and their derivatives</strong>:
+It's possible, that you will get an error saying something like: <code>bash: qmk: command not found</code>.
+This is due to a <a href="https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=839155">bug</a> Debian introduced with their Bash 4.4 release, which removed <code>$HOME/.local/bin</code> from the PATH. This bug was later fixed on Debian and Ubuntu.
+Sadly, Ubuntu reintroduced this bug and is <a href="https://bugs.launchpad.net/ubuntu/+source/bash/+bug/1588562">yet to fix it</a>.
+Luckily, the fix is easy. Run this as your user: <code>echo 'PATH=&quot;$HOME/.local/bin:$PATH&quot;' &gt;&gt; $HOME/.bashrc &amp;&amp; source $HOME/.bashrc</code></p>
+<h3 id="**-freebsd-**-1" tabindex="-1">** FreeBSD **</h3>
+<p>After installing QMK you can set it up with this command:</p>
+<pre><code>qmk setup
+</code></pre>
+<p>In most situations you will want to answer <code>y</code> to all of the prompts.</p>
+<p>&lt;!-- tabs:end --&gt;</p>
+<p>?&gt; The qmk home folder can be specified at setup with <code>qmk setup -H &lt;path&gt;</code>, and modified afterwards using the <a href="cli_configuration.md?id=single-key-example">cli configuration</a> and the variable <code>user.qmk_home</code>. For all available options run <code>qmk setup --help</code>.</p>
+<p>?&gt; If you already know how to use GitHub, <a href="getting_started_github.md">we recommend that you follow these instructions</a> and use <code>qmk setup &lt;github_username&gt;/qmk_firmware</code> to clone your personal fork. If you don't know what that means you can safely ignore this message.</p>
+<h2 id="4.-test-your-build-environment" tabindex="-1">4. Test Your Build Environment</h2>
+<p>Now that your QMK build environment is set up, you can build a firmware for your keyboard. Start by trying to build the keyboard's default keymap. You should be able to do that with a command in this format:</p>
+<pre><code>qmk compile -kb &lt;keyboard&gt; -km default
+</code></pre>
+<p>For example, to build a firmware for a Clueboard 66% you would use:</p>
+<pre><code>qmk compile -kb clueboard/66/rev3 -km default
+</code></pre>
+<p>When it is done you should have a lot of output that ends similar to this:</p>
+<pre><code>Linking: .build/clueboard_66_rev3_default.elf                                                       [OK]
+Creating load file for flashing: .build/clueboard_66_rev3_default.hex                               [OK]
+Copying clueboard_66_rev3_default.hex to qmk_firmware folder                                        [OK]
+Checking file size of clueboard_66_rev3_default.hex                                                 [OK]
+ * The firmware size is fine - 26356/28672 (2316 bytes free)
+</code></pre>
+<h1 id="creating-your-keymap" tabindex="-1">Creating Your Keymap</h1>
+<p>You are now ready to create your own personal keymap! Move on to <a href="newbs_building_firmware.md">Building Your First Firmware</a> for that.</p>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

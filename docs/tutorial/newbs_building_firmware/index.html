@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Building Your First Firmware</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Building Your First Firmware</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#configure-your-build-environment-defaults-(optional)">Configure Your Build Environment Defaults (Optional)</a></li><li><a href="#create-a-new-keymap">Create a New Keymap</a></li><li><a href="#open-keymap.c-in-your-favorite-text-editor">Open keymap.c In Your Favorite Text Editor</a></li><li><a href="#customize-the-layout-to-your-liking">Customize The Layout To Your Liking</a></li><li><a href="#build-your-firmware-%3Aid%3Dbuild-your-firmware">Build Your Firmware :id=build-your-firmware</a></li><li><a href="#flash-your-firmware">Flash Your Firmware</a></li></ol>
+      </nav>
+          </aside>
+          <article><h1 id="building-your-first-firmware" tabindex="-1">Building Your First Firmware</h1>
+<p>Now that you have set up your build environment you are ready to start building custom firmware. For this section of the guide we will bounce between 3 programs- your file manager, your text editor, and your terminal window. Keep all 3 open until you are done and happy with your keyboard firmware.</p>
+<h2 id="configure-your-build-environment-defaults-(optional)" tabindex="-1">Configure Your Build Environment Defaults (Optional)</h2>
+<p>You can configure your build environment to set the defaults and make working with QMK less tedious. Let's do that now!</p>
+<p>Most people new to QMK only have 1 keyboard. You can set this keyboard as your default with the <code>qmk config</code> command. For example, to set your default keyboard to <code>clueboard/66/rev4</code>:</p>
+<pre><code>qmk config user.keyboard=clueboard/66/rev4
+</code></pre>
+<p>?&gt; The keyboard option is the path relative to the keyboard directory, the above example would be found in <code>qmk_firmware/keyboards/clueboard/66/rev4</code>. If you're unsure you can view a full list of supported keyboards with <code>qmk list-keyboards</code>.</p>
+<p>You can also set your default keymap name. Most people use their GitHub username like the keymap name from the previous steps:</p>
+<pre><code>qmk config user.keymap=&lt;github_username&gt;
+</code></pre>
+<h2 id="create-a-new-keymap" tabindex="-1">Create a New Keymap</h2>
+<p>To create your own keymap you'll want to create a copy of the <code>default</code> keymap. If you configured your build environment in the last step you can do that easily with the QMK CLI:</p>
+<pre><code>qmk new-keymap
+</code></pre>
+<p>If you did not configure your environment, or you have multiple keyboards, you can specify a keyboard name:</p>
+<pre><code>qmk new-keymap -kb &lt;keyboard_name&gt;
+</code></pre>
+<p>Look at the output from that command, you should see something like this:</p>
+<pre><code>Ψ &lt;github_username&gt; keymap directory created in: /home/me/qmk_firmware/keyboards/clueboard/66/rev3/keymaps/&lt;github_username&gt;
+</code></pre>
+<p>This is the location of your new <code>keymap.c</code> file.</p>
+<h2 id="open-keymap.c-in-your-favorite-text-editor" tabindex="-1">Open <code>keymap.c</code> In Your Favorite Text Editor</h2>
+<p>Open your <code>keymap.c</code> file in your text editor. Inside this file you'll find the structure that controls how your keyboard behaves. At the top of <code>keymap.c</code> there may be some defines and enums that make the keymap easier to read. Farther down you'll find a line that looks like this:</p>
+<pre><code>const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
+</code></pre>
+<p>This line indicates where the list of Layers begins. Below that you'll find lines containing <code>LAYOUT</code>, and these lines indicate the start of a layer. Below that line is the list of keys that comprise a particular layer.</p>
+<p>!&gt; When editing your keymap file be careful not to add or remove any commas. If you do you will prevent your firmware from compiling and it may not be easy to figure out where the extra, or missing, comma is.</p>
+<h2 id="customize-the-layout-to-your-liking" tabindex="-1">Customize The Layout To Your Liking</h2>
+<p>How to complete this step is entirely up to you. Make the one change that's been bugging you, or completely rework everything. You can remove layers if you don't need all of them, or add layers up to a total of 32. There are a lot of features in QMK, explore the sidebar to the left under &quot;Using QMK&quot; to see the full list. To get you started here are a few of the easier to use features:</p>
+<ul>
+<li><a href="keycodes_basic.md">Basic Keycodes</a></li>
+<li><a href="quantum_keycodes.md">Quantum Keycodes</a></li>
+<li><a href="feature_grave_esc.md">Grave/Escape</a></li>
+<li><a href="feature_mouse_keys.md">Mouse keys</a></li>
+</ul>
+<p>?&gt; While you get a feel for how keymaps work, keep each change small. Bigger changes make it harder to debug any problems that arise.</p>
+<h2 id="build-your-firmware-%3Aid%3Dbuild-your-firmware" tabindex="-1">Build Your Firmware :id=build-your-firmware</h2>
+<p>When your changes to the keymap are complete you will need to build the firmware. To do so go back to your terminal window and run the compile command:</p>
+<pre><code>qmk compile
+</code></pre>
+<p>If you did not configure defaults for your environment, or you have multiple keyboards, you can specify a keyboard and/or keymap:</p>
+<pre><code>qmk compile -kb &lt;keyboard&gt; -km &lt;keymap&gt;
+</code></pre>
+<p>While this compiles you will have a lot of output going to the screen informing you of what files are being compiled. It should end with output that looks similar to this:</p>
+<pre><code>Linking: .build/planck_rev5_default.elf                                                             [OK]
+Creating load file for flashing: .build/planck_rev5_default.hex                                     [OK]
+Copying planck_rev5_default.hex to qmk_firmware folder                                              [OK]
+Checking file size of planck_rev5_default.hex                                                       [OK]
+ * The firmware size is fine - 27312/28672 (95%, 1360 bytes free)
+</code></pre>
+<h2 id="flash-your-firmware" tabindex="-1">Flash Your Firmware</h2>
+<p>Move on to <a href="newbs_flashing.md">Flashing Firmware</a> to learn how to write your new firmware to your keyboard.</p>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>

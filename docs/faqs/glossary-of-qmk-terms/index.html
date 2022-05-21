@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Glossary of QMK Terms</title>
+    <link rel="icon" type="image/png" href="gitbook/images/favicon.png">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="description" content="Description">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta property="og:title" content="QMK Firmware Docs">
+    <meta property="og:type" content="website">
+    <meta property="og:description" content="The full documentation of the open-source firmware">
+    <meta property="og:image" content="https://i.imgur.com/svjvIrw.jpg">
+    <meta property="og:url" content="https://docs.qmk.fm">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/cirrus-ui">
+    <link href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css" rel="stylesheet">
+
+    <style>
+      .doc-grid {
+        display: grid;
+        grid-template-columns: 2fr 7fr;
+      }
+      .doc-grid-internal {
+        display: grid;
+        grid-template-rows: 100px 5fr;
+      }
+      .relative {
+        position: relative;
+        overflow: auto;
+      }
+      .fixed {
+        width: 18vw;
+      }
+      .background {
+        padding: 1rem;
+        margin: 1rem;
+      }
+      main {
+        margin-top: 2.5em;
+      }
+      .content: {
+        justify-content: start;
+        align-items: start;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header header-fixed u-unselectable header-animated">
+  <div class="header-brand">
+    <div class="nav-item no-hover">
+      <a>
+        <h6 class="title">QMK Docs</h6>
+      </a>
+    </div>
+    <div class="nav-item nav-btn" id="header-btn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="header-nav" id="header-menu">
+    <div class="nav-left">
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-github" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-slack" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item text-center">
+        <a href="#">
+          <span class="icon">
+            <i class="fab fa-wrapper fa-twitter" aria-hidden="true"></i>
+          </span>
+        </a>
+      </div>
+      <div class="nav-item has-sub toggle-hover" id="dropdown">
+        <a class="nav-dropdown-link">Animated</a>
+        <ul class="dropdown-menu dropdown-animated" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="nav-right">
+      <div class="nav-item active">
+        <a href="#">Active</a>
+      </div>
+      <div class="nav-item">
+        <a href="#">Link 1</a>
+      </div>
+      <div class="nav-item has-sub" id="dropdown">
+        <a class="nav-dropdown-link">Click Me</a>
+        <ul class="dropdown-menu" role="menu">
+          <li role="menu-item">
+            <a href="#">First Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Second Item</a>
+          </li>
+          <li role="menu-item">
+            <a href="#">Third Item</a>
+          </li>
+          <li class="dropdown-menu-divider"></li>
+          <li role="menu-item">
+            <a href="#">Fourth Item</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+    <main class="frame">
+      <div class="doc-grid">
+        <aside class="relative frame__header background">
+          <div class="nested-list fixed" style="overflow: hidden;">
+            <h5>Index</h5>
+            <ul><li><a href="/">root</a><ul><li><a href="/README/">Readme</a></li>
+<li><a href="/tutorial/">Tutorial</a><ul><li><a href="/tutorial/newbs/">Introduction</a></li>
+<li><a href="/tutorial/newbs_getting_started/">Setup</a></li>
+<li><a href="/tutorial/newbs_building_firmware/">Building Your First Firmware</a></li>
+<li><a href="/tutorial/newbs_flashing/">Flashing Your Keyboard</a></li>
+<li><a href="/tutorial/support/">Getting Help/Support</a></li>
+<li><a href="/tutorial/newbs_learn_more_resources/">Learning Resources</a></li>
+<li><a href="/tutorial/syllabus/">QMK Syllabus</a></li></ul></li>
+<li><a href="/faqs/">FAQs</a><ul><li><a href="/faqs/frequently-asked-questions/">Frequently Asked Questions</a></li>
+<li><a href="/faqs/build-compile-qmk/">Build/Compile QMK</a></li>
+<li><a href="/faqs/troubleshooting-qmk/">Troubleshooting QMK</a></li>
+<li><a href="/faqs/debugging-faq/">Debugging QMK</a></li>
+<li><a href="/faqs/keymap-faq/">Keymap FAQ</a></li>
+<li><a href="/faqs/squeezing-the-most-out-of-avr/">Squeezing Space from AVR</a></li>
+<li><a href="/faqs/glossary-of-qmk-terms/">Glossary</a></li></ul></li></ul></li></ul>
+          </div>
+        </aside>
+        <div class="doc-grid-internal frame__body background">
+          <h1>Glossary of QMK Terms</h1>
+          <aside class="nested-list content">
+            <h4>Contents</h4>
+            
+            <nav class="toc" >
+        <ol><li><a href="#arm">ARM</a></li><li><a href="#avr">AVR</a></li><li><a href="#azerty">AZERTY</a></li><li><a href="#backlight">Backlight</a></li><li><a href="#bluetooth">Bluetooth</a></li><li><a href="#bootloader">Bootloader</a></li><li><a href="#bootmagic">Bootmagic</a></li><li><a href="#c">C</a></li><li><a href="#colemak">Colemak</a></li><li><a href="#compile">Compile</a></li><li><a href="#dvorak">Dvorak</a></li><li><a href="#dynamic-macro">Dynamic Macro</a></li><li><a href="#eclipse">Eclipse</a></li><li><a href="#firmware">Firmware</a></li><li><a href="#git">git</a></li><li><a href="#github">GitHub</a></li><li><a href="#isp">ISP</a></li><li><a href="#hid_listen">hid_listen</a></li><li><a href="#keycode">Keycode</a></li><li><a href="#key-down">Key Down</a></li><li><a href="#key-up">Key Up</a></li><li><a href="#keymap">Keymap</a></li><li><a href="#layer">Layer</a></li><li><a href="#leader-key">Leader Key</a></li><li><a href="#led">LED</a></li><li><a href="#make">Make</a></li><li><a href="#matrix">Matrix</a></li><li><a href="#macro">Macro</a></li><li><a href="#mcu">MCU</a></li><li><a href="#modifier">Modifier</a></li><li><a href="#mousekeys">Mousekeys</a></li><li><a href="#n-key-rollover-(nkro)">N-Key Rollover (NKRO)</a></li><li><a href="#oneshot-modifier">Oneshot Modifier</a></li><li><a href="#promicro">ProMicro</a></li><li><a href="#pull-request">Pull Request</a></li><li><a href="#qwerty">QWERTY</a></li><li><a href="#qwertz">QWERTZ</a></li><li><a href="#rollover">Rollover</a></li><li><a href="#scancode">Scancode</a></li><li><a href="#space-cadet-shift">Space Cadet Shift</a></li><li><a href="#tap">Tap</a></li><li><a href="#tap-dance">Tap Dance</a></li><li><a href="#teensy">Teensy</a></li><li><a href="#underlight">Underlight</a></li><li><a href="#unicode">Unicode</a></li><li><a href="#unit-testing">Unit Testing</a></li><li><a href="#usb">USB</a></li><li><a href="#usb-host-(or-simply-host)">USB Host (or simply Host)</a></li></ol>
+      </nav>
+          </aside>
+          <article><h2 id="arm" tabindex="-1">ARM</h2>
+<p>A line of 32-bit MCUs produced by a number of companies, such as Atmel, Cypress, Kinetis, NXP, ST, and TI.</p>
+<h2 id="avr" tabindex="-1">AVR</h2>
+<p>A line of 8-bit MCUs produced by <a href="https://www.microchip.com/">Atmel</a>. AVR was the original platform that TMK supported.</p>
+<h2 id="azerty" tabindex="-1">AZERTY</h2>
+<p>The standard Français (French) keyboard layout. Named for the first 6 keys on the keyboard.</p>
+<h2 id="backlight" tabindex="-1">Backlight</h2>
+<p>A generic term for lighting on a keyboard. The backlight is typically, but not always, an array of LEDs that shine through keycaps and/or switches.</p>
+<h2 id="bluetooth" tabindex="-1">Bluetooth</h2>
+<p>A short range peer to peer wireless protocol. Most common wireless protocol for a keyboard.</p>
+<h2 id="bootloader" tabindex="-1">Bootloader</h2>
+<p>A special program that is written to a protected area of your MCU that allows the MCU to upgrade its own firmware, typically over USB.</p>
+<h2 id="bootmagic" tabindex="-1">Bootmagic</h2>
+<p>A feature that allows for various keyboard behavior changes to happen on the fly, such as swapping or disabling common keys.</p>
+<h2 id="c" tabindex="-1">C</h2>
+<p>A low-level programming language suitable for system code. Most QMK code is written in C.</p>
+<h2 id="colemak" tabindex="-1">Colemak</h2>
+<p>An alternative keyboard layout that is gaining in popularity.</p>
+<h2 id="compile" tabindex="-1">Compile</h2>
+<p>The process of turning human readable code into machine code your MCU can run.</p>
+<h2 id="dvorak" tabindex="-1">Dvorak</h2>
+<p>An alternative keyboard layout developed by Dr. August Dvorak in the 1930's. A shortened form of the Dvorak Simplified Keyboard.</p>
+<h2 id="dynamic-macro" tabindex="-1">Dynamic Macro</h2>
+<p>A macro which has been recorded on the keyboard and which will be lost when the keyboard is unplugged or the computer rebooted.</p>
+<ul>
+<li><a href="feature_dynamic_macros.md">Dynamic Macro Documentation</a></li>
+</ul>
+<h2 id="eclipse" tabindex="-1">Eclipse</h2>
+<p>An IDE that is popular with many C developers.</p>
+<ul>
+<li><a href="other_eclipse.md">Eclipse Setup Instructions</a></li>
+</ul>
+<h2 id="firmware" tabindex="-1">Firmware</h2>
+<p>The software that controls your MCU.</p>
+<h2 id="git" tabindex="-1">git</h2>
+<p>Versioning software used at the command line</p>
+<h2 id="github" tabindex="-1">GitHub</h2>
+<p>The website that hosts most of the QMK project. It provides integration with git, issue tracking, and other features that help us run QMK.</p>
+<h2 id="isp" tabindex="-1">ISP</h2>
+<p>In-system programming, a method of programming an AVR chip using external hardware and the JTAG pins.</p>
+<h2 id="hid_listen" tabindex="-1">hid_listen</h2>
+<p>An interface for receiving debugging messages from your keyboard. You can view these messages using <a href="https://github.com/qmk/qmk_flasher">QMK Flasher</a> or <a href="https://www.pjrc.com/teensy/hid_listen.html">PJRC's hid_listen</a></p>
+<h2 id="keycode" tabindex="-1">Keycode</h2>
+<p>A 2-byte number that represents a particular key. <code>0x00</code>-<code>0xFF</code> are used for <a href="keycodes_basic.md">Basic Keycodes</a> while <code>0x100</code>-<code>0xFFFF</code> are used for <a href="quantum_keycodes.md">Quantum Keycodes</a>.</p>
+<h2 id="key-down" tabindex="-1">Key Down</h2>
+<p>An event that happens when a key is pressed down, but is completed before a key is released.</p>
+<h2 id="key-up" tabindex="-1">Key Up</h2>
+<p>An event that happens when a key is released.</p>
+<h2 id="keymap" tabindex="-1">Keymap</h2>
+<p>An array of keycodes mapped to a physical keyboard layout, which are processed on key presses and releases</p>
+<h2 id="layer" tabindex="-1">Layer</h2>
+<p>An abstraction used to allow a key to serve multiple purposes. The highest active layer takes precedence.</p>
+<h2 id="leader-key" tabindex="-1">Leader Key</h2>
+<p>A feature that allows you to tap the leader key followed by a sequence of 1, 2, or 3 keys to activate key presses or other quantum features.</p>
+<ul>
+<li><a href="feature_leader_key.md">Leader Key Documentation</a></li>
+</ul>
+<h2 id="led" tabindex="-1">LED</h2>
+<p>Light Emitting Diode, the most common device used for indicators on a keyboard.</p>
+<h2 id="make" tabindex="-1">Make</h2>
+<p>Software package that is used to compile all the source files. You run <code>make</code> with various options to compile your keyboard firmware.</p>
+<h2 id="matrix" tabindex="-1">Matrix</h2>
+<p>A wiring pattern of columns and rows that enables the MCU to detect keypresses with a fewer number of pins. The matrix often incorporates diodes to allow for NKRO.</p>
+<h2 id="macro" tabindex="-1">Macro</h2>
+<p>A feature that lets you send multiple keypress events (hid reports) after having pressed only a single key.</p>
+<ul>
+<li><a href="feature_macros.md">Macro Documentation</a></li>
+</ul>
+<h2 id="mcu" tabindex="-1">MCU</h2>
+<p>Microcontrol Unit, the processor that powers your keyboard.</p>
+<h2 id="modifier" tabindex="-1">Modifier</h2>
+<p>A key that is held down while typing another key to modify the action of that key. Examples include Ctrl, Alt, and Shift.</p>
+<h2 id="mousekeys" tabindex="-1">Mousekeys</h2>
+<p>A feature that lets you control your mouse cursor and click from your keyboard.</p>
+<ul>
+<li><a href="feature_mouse_keys.md">Mousekeys Documentation</a></li>
+</ul>
+<h2 id="n-key-rollover-(nkro)" tabindex="-1">N-Key Rollover (NKRO)</h2>
+<p>A term that applies to keyboards that are capable of reporting any number of key-presses at once.</p>
+<h2 id="oneshot-modifier" tabindex="-1">Oneshot Modifier</h2>
+<p>A modifier that acts as if it is held down until another key is released, so you can press the mod and then press the key, rather than holding the mod while pressing the key. Also known as a Sticky key or a Dead key.</p>
+<h2 id="promicro" tabindex="-1">ProMicro</h2>
+<p>A low cost AVR development board. Clones of this device are often found on ebay very inexpensively (under $5) but people often struggle with flashing their pro micros.</p>
+<h2 id="pull-request" tabindex="-1">Pull Request</h2>
+<p>A request to submit code to QMK. We encourage all users to submit Pull Requests for their personal keymaps.</p>
+<h2 id="qwerty" tabindex="-1">QWERTY</h2>
+<p>The standard English keyboard layout, and often a shortcut for other language's standard layouts. Named for the first 6 letters on the keyboard.</p>
+<h2 id="qwertz" tabindex="-1">QWERTZ</h2>
+<p>The standard Deutsche (German) keyboard layout. Named for the first 6 letters on the keyboard.</p>
+<h2 id="rollover" tabindex="-1">Rollover</h2>
+<p>The term for pressing a key while a key is already held down. Variants include 2KRO, 6KRO, and NKRO.</p>
+<h2 id="scancode" tabindex="-1">Scancode</h2>
+<p>A 1 byte number that is sent as part of a HID report over USB that represents a single key. These numbers are documented in the <a href="https://www.usb.org/sites/default/files/documents/hut1_12v2.pdf">HID Usage Tables</a> published by the <a href="https://www.usb.org/">USB-IF</a>.</p>
+<h2 id="space-cadet-shift" tabindex="-1">Space Cadet Shift</h2>
+<p>A special set of shift keys which allow you to type various types of braces by tapping the left or right shift one or more times.</p>
+<ul>
+<li><a href="feature_space_cadet.md">Space Cadet Shift Documentation</a></li>
+</ul>
+<h2 id="tap" tabindex="-1">Tap</h2>
+<p>Pressing and releasing a key. In some situations you will need to distinguish between a key down and a key up event, and Tap always refers to both at once.</p>
+<h2 id="tap-dance" tabindex="-1">Tap Dance</h2>
+<p>A feature that lets you assign multiple keycodes to the same key based on how many times you press it.</p>
+<ul>
+<li><a href="feature_tap_dance.md">Tap Dance Documentation</a></li>
+</ul>
+<h2 id="teensy" tabindex="-1">Teensy</h2>
+<p>A low-cost AVR development board that is commonly used for hand-wired builds. A teensy is often chosen despite costing a few dollars more due to its halfkay bootloader, which makes flashing very simple.</p>
+<h2 id="underlight" tabindex="-1">Underlight</h2>
+<p>A generic term for LEDs that light the underside of the board. These LEDs typically shine away from the bottom of the PCB and towards the surface the keyboard rests on.</p>
+<h2 id="unicode" tabindex="-1">Unicode</h2>
+<p>In the larger computer world Unicode is a set of encoding schemes for representing characters in any language. As it relates to QMK it means using various OS schemes to send unicode codepoints instead of scancodes.</p>
+<ul>
+<li><a href="feature_unicode.md">Unicode Documentation</a></li>
+</ul>
+<h2 id="unit-testing" tabindex="-1">Unit Testing</h2>
+<p>A framework for running automated tests against QMK. Unit testing helps us be confident that our changes do not break anything.</p>
+<ul>
+<li><a href="unit_testing.md">Unit Testing Documentation</a></li>
+</ul>
+<h2 id="usb" tabindex="-1">USB</h2>
+<p>Universal Serial Bus, the most common wired interface for a keyboard.</p>
+<h2 id="usb-host-(or-simply-host)" tabindex="-1">USB Host (or simply Host)</h2>
+<p>The USB Host is your computer, or whatever device your keyboard is plugged into.</p>
+<h1 id="couldn't-find-the-term-you're-looking-for%3F" tabindex="-1">Couldn't Find the Term You're Looking For?</h1>
+<p><a href="https://github.com/qmk/qmk_firmware/issues">Open an issue</a> with your question and the term in question could be added here. Better still, open a pull request with the definition. :)</p>
+</article>
+        </div>
+      </main>
+    </body>
+  </html>
