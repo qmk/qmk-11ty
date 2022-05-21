@@ -11,12 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(pluginTOC);
   eleventyConfig.addPlugin(syntaxHighlight);
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
-  eleventyConfig.addPassthroughCopy(
-    "/node_modules/beercss/dist/cdn/beer.min.css"
-  );
-  eleventyConfig.addPassthroughCopy(
-    "/node_modules/material-dynamic-colors/dist/cdn/material-dynamic-colors.min.js"
-  );
+  eleventyConfig.addPassthroughCopy("./src/images/favicon.png");
   return {
     dir: {
       input: "src",
