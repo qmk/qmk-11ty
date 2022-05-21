@@ -1,6 +1,7 @@
 ---
 title: Debugging FAQ
 layout: 'base.njk'
+permalink: "faqs/{{title | slugify }}/index.html"
 eleventyNavigation:
   order: 40
   parent: 'FAQs'

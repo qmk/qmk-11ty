@@ -1,6 +1,6 @@
 ---
 title: Squeezing the most out of AVR
-layout: 'base.njk'
+layout: 'faqs.njk'
 eleventyNavigation:
   order: 50
   parent: FAQs

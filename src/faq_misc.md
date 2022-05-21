@@ -1,7 +1,6 @@
 ---
 title: Troubleshooting QMK
-permalink: "faqs/{{title | slugify }}/index.html"
-layout: "base.njk"
+layout: "faqs.njk"
 eleventyNavigation:
   parent: FAQs
   key: Troubleshooting QMK

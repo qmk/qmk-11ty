@@ -1,7 +1,6 @@
 ---
 title: Frequently Asked Questions
-permalink: "faqs/{{title | slugify }}/index.html"
-layout: "base.njk"
+layout: "faqs.njk"
 eleventyNavigation:
   parent: FAQs
   key: Frequently Asked Questions

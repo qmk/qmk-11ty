@@ -1,6 +1,6 @@
 ---
 title: Build/Compile QMK
-layout: 'base.njk'
+layout: 'faqs.njk'
 eleventyNavigation:
   key: 'Build/Compile QMK'
   parent: 'FAQs'

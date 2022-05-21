@@ -1,4 +1,11 @@
-# Keymap FAQ
+---
+title: Keymap FAQ
+layout: faqs.njk
+eleventyNavigation:
+  key: 'Keymap FAQ'
+  parent: 'FAQs'
+  order: 45
+---
 
 This page covers questions people often have about keymaps. If you haven't you should read [Keymap Overview](keymap.md) first.
 
