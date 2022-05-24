@@ -1,9 +1,8 @@
 ---
 title: 'Getting Help/Support'
 layout: 'base.njk'
+parent: 'Tutorial'
 eleventyNavigation:
-  key: 'Getting Help/Support'
-  parent: 'Tutorial'
   order: 50
 ---
 # Getting Help

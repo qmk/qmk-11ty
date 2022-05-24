@@ -1,9 +1,8 @@
 ---
 title: Flashing Your Keyboard
 layout: 'base.njk'
+parent: 'Tutorial'
 eleventyNavigation:
-  key: 'Flashing Your Keyboard'
-  parent: 'Tutorial'
   order: 40
 ---
 Now that you've built a custom firmware file you'll want to flash your keyboard.

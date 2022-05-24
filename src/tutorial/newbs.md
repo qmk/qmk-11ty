@@ -1,9 +1,8 @@
 ---
 title: "Introduction"
 layout: "base.njk"
+parent: 'Tutorial'
 eleventyNavigation:
-  key: 'Introduction'
-  parent: 'Tutorial'
   order: 10
 ---
 # The QMK Tutorial

@@ -1,9 +1,7 @@
 ---
 title: Tutorial
-layout: 'base.njk'
-parent: true
+isParent: true
+parent: root
 eleventyNavigation:
-  key: 'Tutorial'
-  parent: 'root'
   order: 10
 ---

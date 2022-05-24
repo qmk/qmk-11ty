@@ -1,7 +1,7 @@
 ---
 title: FAQs
-layout: 'base.njk'
-parent: true
+layout: 'faqs.njk'
+isParent: true
 eleventyNavigation:
   key: FAQs
   parent: root

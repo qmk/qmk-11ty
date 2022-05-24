@@ -1,9 +1,8 @@
 ---
 title: 'Setup'
 layout: 'base.njk'
+parent: 'Tutorial'
 eleventyNavigation:
-  key: 'Setup'
-  parent: 'Tutorial'
   order: 20
 ---
 # Setting Up Your QMK Environment

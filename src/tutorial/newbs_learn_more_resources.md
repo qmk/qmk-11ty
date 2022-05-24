@@ -1,9 +1,8 @@
 ---
 title: Learning Resources
 layout: 'base.njk'
+parent: 'Tutorial'
 eleventyNavigation:
-  key: 'Learning Resources'
-  parent: 'Tutorial'
   order: 60
 ---
 # Learning Resources

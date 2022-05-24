@@ -1,9 +1,8 @@
 ---
 title: QMK Syllabus
 layout: 'base.njk'
+parent: Tutorial
 eleventyNavigation:
-  key: QMK Syllabus
-  parent: Tutorial
   order: 80
 ---
 

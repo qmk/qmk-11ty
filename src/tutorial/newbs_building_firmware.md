@@ -1,9 +1,8 @@
 ---
 title: Building Your First Firmware
 layout: 'base.njk'
+parent: 'Tutorial'
 eleventyNavigation:
-  key: 'Building Your First Firmware'
-  parent: 'Tutorial'
   order: 30
 ---
 # Building Your First Firmware
