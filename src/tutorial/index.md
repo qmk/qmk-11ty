@@ -5,4 +5,5 @@ parent: true
 eleventyNavigation:
   key: 'Tutorial'
   parent: 'root'
+  order: 10
 ---
