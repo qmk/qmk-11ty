@@ -1,9 +1,7 @@
 ---
 title: Keymap FAQ
-layout: faqs.njk
+parent: 'FAQs'
 eleventyNavigation:
-  key: 'Keymap FAQ'
-  parent: 'FAQs'
   order: 45
 ---
 

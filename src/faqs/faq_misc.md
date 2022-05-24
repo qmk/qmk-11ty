@@ -1,9 +1,7 @@
 ---
 title: Troubleshooting QMK
-layout: "faqs.njk"
+parent: FAQs
 eleventyNavigation:
-  parent: FAQs
-  key: Troubleshooting QMK
   order: 30
 ---
 # Miscellaneous FAQ

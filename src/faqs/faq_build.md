@@ -1,9 +1,7 @@
 ---
 title: Build/Compile QMK
-layout: 'faqs.njk'
+parent: 'FAQs'
 eleventyNavigation:
-  key: 'Build/Compile QMK'
-  parent: 'FAQs'
   order: 20
 ---
 This page covers questions about building QMK. If you haven't yet done so, you should read the [Build Environment Setup](getting_started_build_tools.md) and [Make Instructions](getting_started_make_guide.md) guides.

@@ -1,9 +1,7 @@
 ---
 title: Frequently Asked Questions
-layout: "faqs.njk"
+parent: FAQs
 eleventyNavigation:
-  parent: FAQs
-  key: Frequently Asked Questions
 ---
 # Frequently Asked Questions
 

@@ -1,15 +1,13 @@
 ---
-title: Debugging FAQ
-layout: 'faqs.njk'
+title: 'Debugging QMK'
+parent: FAQs
 eleventyNavigation:
   order: 40
-  parent: 'FAQs'
-  key: 'Debugging QMK'
 ---
 
 This page details various common questions people have about troubleshooting their keyboards.
 
-## Debugging :id=debugging
+## Debugging
 
 Your keyboard will output debug information if you have `CONSOLE_ENABLE = yes` in your `rules.mk`. By default the output is very limited, but you can turn on debug mode to increase the amount of debug output. Use the `DEBUG` keycode in your keymap, use the [Command](feature_command.md) feature to enable debug mode, or add the following code to your keymap.
 
