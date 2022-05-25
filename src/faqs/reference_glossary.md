@@ -1,9 +1,7 @@
 ---
 title: Glossary of QMK Terms
-layout: 'faqs.njk'
+parent: FAQs
 eleventyNavigation:
-  key: 'Glossary'
-  parent: FAQs
   order: 60
 ---
 

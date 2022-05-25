@@ -1,10 +1,8 @@
 ---
 title: Squeezing the most out of AVR
-layout: 'faqs.njk'
+parent: FAQs
 eleventyNavigation:
   order: 50
-  parent: FAQs
-  key: 'Squeezing Space from AVR'
 ---
 
 AVR is severely resource-constrained, and as QMK continues to grow, it is approaching a point where support for AVR may need to be moved to legacy status as newer development is unable to fit into those constraints.
